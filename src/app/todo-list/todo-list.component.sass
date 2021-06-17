@@ -5,15 +5,42 @@ h1
     color: white
     margin: 0
 
+.todos
+    display: flex
+    justify-content: space-between
+    padding: 6px 0
+    margin: 10px 0 0 0
+
 ul
     border: 6px solid darkslateblue
-    padding: 12px
     background: floralwhite
-    margin: 10px 0
-    
+    width: 50%
+    margin: 0
+    margin-right: 12px
+    padding: 12px
 
 li
     list-style: none
+    cursor: pointer
+    line-height: 1
+    padding: 1px 0
+
+    p:hover 
+        color: darkslateblue
+
+.filter-buttons
+    display: flex
+    flex-direction: column
+    width: 40%
+    height: 110px
+    justify-content: space-between
+
+input
+    background: none
+    border: 2px solid black
+    color: black
+    height: 32px
+    font-weight: 500
     cursor: pointer
 
 .todo 
@@ -26,22 +53,3 @@ li
 .checked 
     text-decoration: line-through
     color: darkslateblue
-
-.add-todo-input
-    padding: 4px
-    border-radius: 0
-    border: 6px solid black
-    margin-right: 12px
-    font-size: 20px
-    background: floralwhite
-
-.add-todo
-    background: darkslateblue
-    color: white
-    font-weight: 600
-    font-size: 18px
-    border: none
-    border-radius: 50%
-    height: 100px
-    width: 100px
-    cursor: pointer

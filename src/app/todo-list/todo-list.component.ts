@@ -15,6 +15,8 @@ export class TodoListComponent {
     { title: 'laugh', checked: false },
   ];
 
+  filter: 'all' | 'active' | 'done' = 'all';
+
   @Input() newItem = {};
   
   addNewTodo(input: any) {
@@ -22,6 +24,13 @@ export class TodoListComponent {
       title: input,
       checked: false
     });
+  }
+
+  get items() {
+    if (this.filter === 'all') {
+      return this.allItems;
+    }
+    else return this.allItems.filter(item => this.filter === 'done' ? item.checked : !item.checked)
   }
 
 }

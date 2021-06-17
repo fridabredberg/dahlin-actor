@@ -1,9 +1,18 @@
 
 <h1>TODO LIST</h1>
-<ul>
-    <li *ngFor="let item of allItems">
-        <p class="todo" [ngClass]="{'checked': item.checked}" (click)="item.checked = !item.checked">{{item.title}}</p>
-    </li>
-</ul>
+<div class="todos">
+    <ul>
+        <li *ngFor="let item of items">
+            <p class="todo" [ngClass]="{'checked': item.checked}" (click)="item.checked = !item.checked">{{item.title}}</p>
+        </li>
+    </ul>
+    <div class="filter-buttons">
+        <input type="button" value="All done!" (click)="filter = 'done'" />
+        <input type="button" value="Still not done..." (click)="filter = 'active'" />
+        <input type="button" value="Show me all of 'em!" (click)="filter = 'all'" />
+    </div>
+</div>
+
 <app-add-input (todoToAdd)="addNewTodo($event)"></app-add-input>
+
 
