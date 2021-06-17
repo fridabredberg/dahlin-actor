@@ -5,6 +5,5 @@
         <p class="todo" [ngClass]="{'checked': item.checked}" (click)="item.checked = !item.checked">{{item.title}}</p>
     </li>
 </ul>
+<app-add-input (todoToAdd)="addNewTodo($event)"></app-add-input>
 
-<input type="text" [(ngModel)]="newItem.title" #newItem class="add-todo-input" placeholder="Want more to do?" />
-<input type="button" value="Add todo!" (click)="addTodo(newItem.value); newItem.value = ''" class="add-todo" />

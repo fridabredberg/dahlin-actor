@@ -6,11 +6,7 @@ import { ListItem } from '../list-item'
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.sass']
 })
-export class TodoListComponent implements OnInit {
-  newItem: ListItem = {
-    title: "",
-    checked: false
-  }
+export class TodoListComponent {
 
   allItems = [
     { title: 'eat', checked: true },
@@ -19,10 +15,9 @@ export class TodoListComponent implements OnInit {
     { title: 'laugh', checked: false },
   ];
 
-  ngOnInit(): void {
-  }
+  @Input() newItem = {};
   
-  addTodo(input: string) {
+  addNewTodo(input: any) {
     this.allItems.push({
       title: input,
       checked: false

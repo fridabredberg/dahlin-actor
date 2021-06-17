@@ -1,0 +1,2 @@
+<input type="text" [(ngModel)]="title" #newItem class="add-todo-input" placeholder="Want more to do?" />
+<input type="button" value="Add todo!" (click)="addTodo(); newItem.value = ''" class="add-todo" />
