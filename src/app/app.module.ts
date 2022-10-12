@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { AddInputComponent } from './add-input/add-input.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent,
-    AddInputComponent
-    
+    MenuComponent
+
   ],
   imports: [
     BrowserModule,

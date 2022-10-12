@@ -1,10 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { MenuOption } from './menu-option';
+import { MenuOptions } from './menu-options';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'todo-list';
+  menuContent: MenuOption = MenuOptions[0];
+
+  showSelected(menuOption: MenuOption) {
+    this.menuContent = menuOption;
+  }
 }

@@ -1,0 +1,4 @@
+<div class="menu-options">
+    <span *ngFor="let option of menuOptions" [ngClass]="{'selected': option.selected}"
+        (click)="setMenuOption(option)">{{option.title}}</span>
+</div>
